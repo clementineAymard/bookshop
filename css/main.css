@@ -1,0 +1,233 @@
+body {
+    font-family: calibri;
+    /* display: flex;
+    flex-direction: column;
+    align-items: start; */
+
+    box-sizing: border-box;
+}
+
+.btn-display img {
+    background-color: white;
+    height: 15px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.book-filter {
+    padding: 5px;
+    background-color: lightgrey;
+}
+
+.book-filter h2 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.btn-new-book {
+    margin: 10px 0;
+}
+
+article {
+    background-color: rgb(171, 166, 188);
+    color: white;
+    width: 200px;
+    box-sizing: border-box;
+    margin: 0.5em;
+    border: 1px solid lightgray;
+    border-radius: 0.2em;
+    text-align: center;
+    padding: 5px;
+}
+
+.books-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+}
+
+.books-container table {
+    border: solid;
+    border-color: black;
+    border-collapse: collapse;
+    margin-block: 10px;
+}
+
+.books-container thead,
+td,
+th {
+    border: solid grey;
+}
+
+.books-container thead {
+    height: 30px;
+    background-color: antiquewhite;
+}
+
+.books-container td {
+    height: 30px;
+    width: 30px;
+    padding: 0 3px;
+}
+
+.books-container td:first-child {
+    text-align: center;
+}
+
+.books-container .col-title {
+    width: 150px;
+}
+
+.books-container td:nth-child(2) {
+    overflow-x: hidden;
+}
+
+.books-container .col-price {
+    width: 50px;
+}
+
+.books-container td:nth-child(3) {
+    font-weight: bold;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.books-container .btn {
+    margin: 3px;
+    border: none;
+    border-radius: 5px;
+    width: 70px;
+    height: 25px;
+}
+
+.books-container .btn-read {
+    background-color: rgb(111, 159, 255);
+}
+
+.books-container .btn-update {
+    background-color: orange;
+}
+
+.books-container .btn-delete {
+    background-color: red;
+}
+
+/* 
+.backdrop {
+    opacity: 0;
+    background-color: rgba(128, 128, 128, 0.404);
+    transition: opacity 1s ease-out;
+    position: fixed;
+    z-index: 0;
+    pointer-events: all;
+}
+
+.backdrop .open {
+    opacity: 1;
+    z-index: 2;
+} */
+
+.modal-read {
+    width: 200px;
+    height: 300px;
+    translate: -50% -50%;
+    position: fixed;
+    inset: 50% 50%;
+
+    visibility: hidden;
+    background-color: rgb(215, 236, 255);
+    padding: 5px;
+    border-radius: 10px;
+    border: solid lightgrey 1px;
+    box-shadow: 3px 3px 6px rgb(173 173 173);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-read .btn-close {
+    border-radius: 15%;
+    border: solid 1px rgb(255, 71, 42);
+    background-color: rgb(255, 121, 100);
+    color: white;
+    width: 15px;
+    height: 15px;
+
+    font-size: 10px;
+    padding: 1px;
+    text-align: center;
+
+    position: relative;
+    left: 175px;
+    top: 5px
+}
+
+.modal-read h1 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: normal;
+    border-bottom: solid 1px rgb(123, 0, 8);
+    width: 190px;
+    height: 40px;
+    padding-bottom: 3px;
+    margin-block-end: 2px;
+}
+
+.modal-read h1 span {
+    font-size: 20px;
+    font-family: 'Times New Roman';
+    font-weight: bold;
+}
+
+.modal-read h2 {
+    margin: 0;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: normal;
+    color: brown;
+    width: 190px;
+    height: 40px;
+}
+
+.modal-read .price-modal {
+    align-self: end;
+    height: 30px;
+    width: 70px;
+}
+
+.modal-read .price-modal span {
+    font-weight: bold;
+}
+
+.modal-read .img-modal {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    color: rgb(123, 0, 8);
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 8px
+}
+
+.modal-read .img-modal img {
+    max-width: 100em;
+    max-height: 70%;
+}
+
+.rating {
+    align-self: center;
+    width: 70px;
+    text-align: center;
+    background-color: white;
+}
+
+.rating button {
+    background-color: rgb(131, 184, 255);
+    color: white;
+    border: none;
+    margin: 5px
+}
